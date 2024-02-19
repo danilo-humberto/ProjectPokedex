@@ -22,5 +22,5 @@
 
 ```bash
     # Entre no diretório
-    $ cd ProjectPokemon
+    $ cd ProjectPokedex
 ```
