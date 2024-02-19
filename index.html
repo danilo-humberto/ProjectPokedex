@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <div class="background">
+        <video muted loop autoplay>
+            <source src="assets/Pokémon the Movie_ I Choose You! Full Theatrical Trailer.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="content">
+        <div class="data">
+            <h1>Pokédex</h1>
+            <p>Bem-vindo à Pokédex definitiva, sua fonte completa para descobrir e aprender sobre cada Pokémon que já habitou nosso vasto mundo! Aqui, você encontrará uma enciclopédia digital interativa, repleta de informações detalhadas sobre cada espécie, desde os clássicos favoritos até os mais recentes recém-descobertos. </p>
+            <button class="btn">
+                <span>ir para pokédex</span>
+            </button>
+        </div>
+
+        <div class="imgAsh">
+            <img src="assets/sideImage-removebg-preview.png" alt="imagem do ash">
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="search">
+            <form class="form">
+                <label>bem vindo à pokédex</label>
+                <input type="search" id="input" placeholder="put id or name of the pokemon" autofocus required>
+
+                <button>
+                    <span>pesquisar</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="pokedex">
+            <img src="assets/pokedex.png" alt="">
+
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/132.gif" alt="" class="image">
+        </div>
+    </div>
+</body>
+</html>

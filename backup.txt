@@ -1,0 +1,88 @@
+<div class="container">
+        <img src="imgs/pokedex.png" alt="">
+
+        <img src="" alt="" class="image">
+        
+        <p class="idName"><span class="id"></span> - <span class="name"></span></p>
+
+        <div class="assets">
+            <div class="stats">
+                <h3>stats</h3>
+                <p>hp: <span class="hp"></span></p>
+                <p>atk: <span class="atk"></span></p>
+                <p>def: <span class="def"></span></p>
+                <p>speed: <span class="speed"></span></p>
+            </div>
+
+            <div class="types">
+                <h3>types</h3>
+                <ul class="types-list">
+                    
+                </ul>
+            </div>
+        </div>
+
+        <form class="form">
+            <input type="search" id="input" placeholder="put id or name of the pokemon" autofocus required>
+        </form>
+    </div>
+
+- CSS -
+
+.container {
+    display: block;
+    position: relative;
+}
+
+.image {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+}
+
+.idName {
+    position: absolute;
+    bottom: 40.5%;
+    left: 40%;
+    font-size: 1.5rem;
+}
+
+.assets {
+    display: flex;
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    gap: 50px;
+    font-size: 1.2rem;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#input {
+    position: absolute;
+    bottom: 8%;
+    left: 20%;
+
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    width: 50%;
+    
+    background-color: rgba(226, 40, 40, 0.641);
+}
+
+#input::placeholder {
+    color: #beb4b4;
+}
+
+.types {
+    display: flex;
+    flex-direction: column;
+}
