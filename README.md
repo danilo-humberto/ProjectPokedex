@@ -12,15 +12,3 @@
 > - HTML
 > - CSS
 > - JavaScript
-
-### ♻ How Contribute
-
-```bash
-    # Clone o projeto
-    $ git clone https://github.com/danilo-humberto/ProjectPokedex.git
-```
-
-```bash
-    # Entre no diretório
-    $ cd ProjectPokedex
-```
