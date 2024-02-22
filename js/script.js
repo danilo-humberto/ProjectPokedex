@@ -1,8 +1,9 @@
 const input = document.getElementById('input')
 const namePokemon = document.querySelector('.name')
-const idPokemon = document.querySelector('.id')
+const idPokemon = document.querySelector('.idPokemon')
 const imageGif = document.querySelector('.image')
 const form = document.querySelector('.form')
+const btnSearch = document.querySelector('.btnSearch')
 
 // STATS
 
@@ -15,6 +16,29 @@ const speed = document.querySelector('.speed')
 
 const ulType = document.querySelector('.types-list')
 
+// COLORS
+
+const colors = {
+    fire: "#FF7F50",
+    water: "#1E90FF",
+    grass: "#2E8B57",
+    flying: "#87CEEB",
+    fighting: "#B22222",
+    poison: "#EE82EE",
+    electric: "#EEDD82",
+    ground: "#DAA520",
+    rock: "#B8860B",
+    psychic: "#FF69B4",
+    ice: "#AFEEEE",
+    bug: "#8FBC8F",
+    ghost: "#9370DB",
+    steel: "#778899",
+    dragon: "#9932CC",
+    dark: "#A0522D",
+    fairy: "#FFC0CB"
+}
+
+const mainTypes = Object.keys(colors)
 
 // FUNCTIONS
 
@@ -31,10 +55,10 @@ const showResult = async (id) => {
 
     idPokemon.innerHTML = ''
     namePokemon.innerHTML = "loading..."
-    hp.innerHTML = ''
-    atk.innerHTML = ''
-    def.innerHTML = ''
-    speed.innerHTML = ''
+    hp.innerHTML = 'x'
+    atk.innerHTML = 'x'
+    def.innerHTML = 'x'
+    speed.innerHTML = 'x'
     ulType.innerHTML = ''
 
     const data = await fetchPokemon(id)
@@ -57,6 +81,13 @@ const showResult = async (id) => {
         type.forEach(t => {
             const liType = document.createElement('li')
             liType.innerHTML = t.type.name
+
+            const colorType = mainTypes.find(ty => ty === t.type.name)
+            const color = colors[colorType]
+
+            if(color) {
+                liType.style.backgroundColor = color
+            }
             ulType.appendChild(liType)
         })
 
@@ -75,6 +106,13 @@ form.addEventListener('submit', (e) => {
     imageGif.style.display = 'block'
 })
 
+btnSearch.addEventListener('click', (e) => {
+    e.preventDefault()
+    showResult(input.value.toLowerCase())
+    input.value = ''
+    imageGif.style.display = 'block'
+})
+
 showResult(1)
 
 const toggleBtn = document.querySelector('.btn')
@@ -83,5 +121,5 @@ const container = document.querySelector('#container')
 
 toggleBtn.addEventListener('click', () => {
     content.style.display = 'none'
-    container.style.display = 'block'
+    container.style.display = 'flex'
 })
