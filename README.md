@@ -12,3 +12,5 @@
 > - HTML
 > - CSS
 > - JavaScript
+
+> acesse o site: https://danilo-humberto.github.io/ProjectPokedex/
