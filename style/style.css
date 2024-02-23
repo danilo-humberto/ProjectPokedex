@@ -16,9 +16,14 @@ body, html {
     scroll-behavior: smooth;
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .content {
     width: 100%;
-    height: 100%;
+    height: 97%;
     color: #fff;
     display: flex;
     justify-content: space-evenly;
@@ -112,11 +117,26 @@ body, html {
         width: 200px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .content {
+        height: 95%;
+    }
+
+    .data p {
+        font-size: 0.8rem;
+        line-height: 15px;
+    }
+
+    .data button {
+        padding: 5px;
+    }
+}
 /* SEARCH POKEMONS */
 
 #container {
     width: 100%;
-    height: 100%;
+    height: 97%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -269,17 +289,33 @@ body, html {
 }
 
 @media screen and (max-width: 600px) {
+    #container {
+        height: 95%;
+    }
+
     .search form label{
         font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .form input {
+        padding: 6px;
+        height: 40px;
     }
 
     .search button {
         width: 50%;
+        height: 30px;
+        font-size: 0.8rem;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .image {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         left: 37%;
         top: 33%;
     }
@@ -289,6 +325,7 @@ body, html {
     }
 
     .idNome {
+        font-size: 1rem;
         bottom: 40%;
         left: 40%;
     }
@@ -318,21 +355,60 @@ body, html {
 
     .image {
         width: 60px;
-        height: 60px;
+        height: 50px;
     }
 
     .idNome {
-        bottom: 39.5%;
-        left: 38%;
-        font-size: 1.3rem;
+        bottom: 40%;
+        left: 40%;
+        font-size: 1rem;
     }
 
     .types {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    .assets {
+        left: 22%;
     }
 
     .habilities {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         gap: 10px;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    gap: 20px;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social i {
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social i:hover{
+    color: rgb(237, 115, 115);
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        font-size: 1rem;
+    }
+
+    .social i {
+        font-size: 20px;
     }
 }
