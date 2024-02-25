@@ -287,12 +287,12 @@ footer {
 
     .data h1 {
         font-size: 4rem;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
     }
 
     .data p {
         line-height: 20px;
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     .data button {
@@ -367,5 +367,44 @@ footer {
     .habilities {
         gap: 25px;
         font-size: .8rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        font-size: 1rem;
+    }
+
+    .social i {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /* SEARCH POKEMON*/
+
+    .search form label {
+        margin-top: 15px;
+        font-size: 1.6rem;
+    }
+
+    /* POKÉDEX */
+    .imgPoke {
+        width: 80%;
+    }
+
+    .idNome {
+        left: 39%;
+        font-size: 1.1rem;
+    }
+
+    .types {
+        bottom: 29%;
+    }
+
+    .assets {
+        bottom: 9%;
+        left: 30%;
     }
 }
