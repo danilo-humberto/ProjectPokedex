@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
 ul li {
@@ -21,9 +22,11 @@ a {
     text-decoration: none;
 }
 
+/* MAIN PAGE */
+
 .content {
     width: 100%;
-    height: 97%;
+    height: 96%;
     color: #fff;
     display: flex;
     justify-content: space-evenly;
@@ -89,54 +92,11 @@ a {
     opacity: 1;
 }
 
-@media screen and (max-width: 800px) {
-    .data {
-        width: 80%;
-        align-items: center;
-    }
-
-    .data h1 {
-        font-size: 4rem;
-    }
-
-    .data p {
-        font-size: 1rem;
-    }
-
-    .data button {
-        width: 200px;
-    }
-
-    .imgAsh {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .data button {
-        width: 200px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .content {
-        height: 95%;
-    }
-
-    .data p {
-        font-size: 0.8rem;
-        line-height: 15px;
-    }
-
-    .data button {
-        padding: 5px;
-    }
-}
 /* SEARCH POKEMONS */
 
 #container {
     width: 100%;
-    height: 97%;
+    height: 96%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -222,37 +182,10 @@ a {
 
 .idNome {
     position: absolute;
-    bottom: 40.5%;
-    left: 42%;
+    bottom: 40%;
+    left: 39%;
     font-size: 1.5rem;
     text-transform: capitalize;
-}
-
-.assets {
-    position: absolute;
-    bottom: 15%;
-    left: 12%;
-}
-
-.stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.stats h3 {
-    margin-bottom: 10px;
-}
-
-.habilities {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 1rem;
 }
 
 .types {
@@ -262,7 +195,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     text-transform: uppercase;
     color: black;
 }
@@ -282,101 +214,37 @@ a {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 1000px) {
-    #container {
-        flex-direction: column;
-    }
+.assets {
+    position: absolute;
+    bottom: 11%;
+    left: 22%;
 }
 
-@media screen and (max-width: 600px) {
-    #container {
-        height: 95%;
-    }
-
-    .search form label{
-        font-size: 1.5rem;
-        margin-top: 30px;
-    }
-
-    .form input {
-        padding: 6px;
-        height: 40px;
-    }
-
-    .search button {
-        width: 50%;
-        height: 30px;
-        font-size: 0.8rem;
-        margin-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .image {
-        width: 50px;
-        height: 50px;
-        left: 37%;
-        top: 33%;
-    }
-
-    .imgPoke {
-        width: 90%;
-    }
-
-    .idNome {
-        font-size: 1rem;
-        bottom: 40%;
-        left: 40%;
-    }
-
-    .assets {
-        left: 16%;
-    }
-
-    .habilities {
-        font-size: 0.85rem;
-        gap: 10px;
-    }
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
 }
 
-@media screen and (max-width: 400px){
-    .search form label {
-        padding: 0;
-    }
-
-    .search button {
-        margin-bottom: 10px;
-    }
-
-    .imgPoke {
-        width: 80%;
-    }
-
-    .image {
-        width: 60px;
-        height: 50px;
-    }
-
-    .idNome {
-        bottom: 40%;
-        left: 40%;
-        font-size: 1rem;
-    }
-
-    .types {
-        font-size: 0.7rem;
-    }
-
-    .assets {
-        left: 20%;
-    }
-
-    .habilities {
-        font-size: 0.7rem;
-        gap: 10px;
-    }
+.stats h3 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    margin-bottom: 20px;
 }
+
+.habilities {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.2rem;
+}
+
+/* FOOTER */
 
 footer {
     display: flex;
@@ -385,6 +253,7 @@ footer {
     color: #fff;
     font-size: 1.2rem;
     gap: 20px;
+    height: 3%;
 }
 
 .social {
@@ -403,12 +272,100 @@ footer {
     transform: scale(1.2);
 }
 
-@media screen and (max-width: 600px) {
-    footer {
+@media screen and (max-width: 900px) {
+
+    /* MAIN PAGE */
+    .content {
+        height: 95%;
+    }
+
+    .data {
+        width: 80%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .data h1 {
+        font-size: 4rem;
+        padding-bottom: 10px;
+    }
+
+    .data p {
+        line-height: 20px;
         font-size: 1rem;
     }
 
-    .social i {
-        font-size: 20px;
+    .data button {
+        width: 70%;
+    }
+
+    .imgAsh {
+        display: none;
+    }
+
+    /* SEARCH POKEMON */
+
+    #container {
+        height: 95.5%;
+    }
+
+    .search form label {
+        margin-top: 15px;
+        font-size: 1.8rem;
+    }
+
+    .search input {
+        height: 40px;
+        margin-top: 10px;
+    }
+    
+    .search button {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        padding: 5px;
+        width: 50%;
+        font-size: .8rem;
+    }
+
+    /* POKÉDEX */
+
+    .imgPoke {
+        width: 70%;
+    }
+
+    .image {
+        width: 60px;
+        height: 60px;
+        left: 40%;
+        top: 33%;
+    }
+
+    .idNome {
+        bottom: 39.5%;
+        left: 40%;
+        font-size: 1.2rem;
+    }
+
+    .types {
+        bottom: 30%;
+        left: 33%;
+        font-size: .8rem;
+    }
+
+    .assets {
+        bottom: 11%;
+        left: 32%;
+    }
+    
+    .stats h3 {
+        position: absolute;
+        font-size: 1rem;
+        bottom: 30px;
+        left: 22px;
+    }
+    
+    .habilities {
+        gap: 25px;
+        font-size: .8rem;
     }
 }
