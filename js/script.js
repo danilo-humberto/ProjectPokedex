@@ -2,7 +2,6 @@ const input = document.getElementById('input')
 const namePokemon = document.querySelector('.name')
 const idPokemon = document.querySelector('.idPokemon')
 const imageGif = document.querySelector('.image')
-const form = document.querySelector('.form')
 const btnSearch = document.querySelector('.btnSearch')
 
 // STATS
@@ -40,6 +39,16 @@ const colors = {
 
 const mainTypes = Object.keys(colors)
 
+
+const toggleBtn = document.querySelector('.btn')
+const content = document.querySelector('.content')
+const container = document.querySelector('#container')
+
+toggleBtn.addEventListener('click', () => {
+    content.style.display = 'none'
+    container.style.display = 'flex'
+})
+
 // FUNCTIONS
 
 const fetchPokemon = async (pokemon) => {
@@ -62,7 +71,6 @@ const showResult = async (id) => {
     ulType.innerHTML = ''
 
     const data = await fetchPokemon(id)
-    console.log(data);
 
     if (data){
         ulType.innerHTML = ''
@@ -99,29 +107,17 @@ const showResult = async (id) => {
 
 }
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    showResult(input.value.toLowerCase())
-    input.value = ''
-    input.blur()
-    imageGif.style.display = 'block'
-})
-
 btnSearch.addEventListener('click', (e) => {
     e.preventDefault()
-    showResult(input.value.toLowerCase())
-    input.value = ''
-    input.blur()
-    imageGif.style.display = 'block'
+    if(!input.value == '') {
+        showResult(input.value.toLowerCase())
+        input.value = ''
+        input.blur()
+        imageGif.style.display = 'block' 
+    } else {
+        alert('preencha a caixa de pesquisa')
+    }
 })
 
 showResult(1)
 
-const toggleBtn = document.querySelector('.btn')
-const content = document.querySelector('.content')
-const container = document.querySelector('#container')
-
-toggleBtn.addEventListener('click', () => {
-    content.style.display = 'none'
-    container.style.display = 'flex'
-})
