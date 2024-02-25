@@ -103,6 +103,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     showResult(input.value.toLowerCase())
     input.value = ''
+    input.blur()
     imageGif.style.display = 'block'
 })
 
@@ -110,6 +111,7 @@ btnSearch.addEventListener('click', (e) => {
     e.preventDefault()
     showResult(input.value.toLowerCase())
     input.value = ''
+    input.blur()
     imageGif.style.display = 'block'
 })
 
